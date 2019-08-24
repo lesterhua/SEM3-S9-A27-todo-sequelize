@@ -21,30 +21,7 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.get("/users/login", (req, res) => {
-  res.render("login");
-});
-
-app.post("/users/login", (req, res) => {
-  res.send("login");
-});
-
-app.get("/users/register", (req, res) => {
-  res.render("register");
-});
-
-app.post("/users/register", (req, res) => {
-  console.log(req.body);
-  User.create({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password
-  }).then(user => res.redirect("/"));
-});
-
-app.get("/users/logout", (res, req) => {
-  res.send("logout");
-});
+app.use("/users", require("./routes/user"));
 
 app.listen(port, () => {
   console.log(`App is running on : localhost:${port}`);
