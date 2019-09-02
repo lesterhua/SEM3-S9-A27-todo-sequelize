@@ -26,9 +26,7 @@ const db = require("./models");
 const Todo = db.Todo;
 const User = db.User;
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -38,7 +36,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/', require('./routes/home'))
 app.use("/users", require("./routes/user"));
+app.use('/todos', require('./routes/todo'))
+
 
 app.listen(port, () => {
   console.log(`App is running on : localhost:${port}`);
