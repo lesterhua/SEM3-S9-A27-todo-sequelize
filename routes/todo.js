@@ -65,7 +65,7 @@ router.get('/:id/edit', authenticated, (req, res) => {
 })
 
 //edit action
-router.post('/:id', authenticated, (req, res) => {
+router.put('/:id', authenticated, (req, res) => {
   Todo.findOne({
     where: {
       Id: req.params.id,
@@ -83,7 +83,7 @@ router.post('/:id', authenticated, (req, res) => {
 })
 
 //delete action 
-router.post('/:id/delete', authenticated, (req, res) => {
+router.delete('/:id/delete', authenticated, (req, res) => {
   User.findByPk(req.user.id)
     .then((user) => {
       if (!user) throw new Error('user not found')
