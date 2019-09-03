@@ -8,8 +8,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  Todo.associate = function(models) {
+  Todo.associate = function (models) {
     Todo.belongsTo(models.User);
   };
   return Todo;
 };
+
+
