@@ -10,16 +10,15 @@ module.exports = passport => {
     new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
       User.findOne({ where: { email: email } }).then(user => {
         if (!user) {
-          return done(null, false, { message: "That email is not registered" });
+          return done(null, false, { message: "此 Email 尚未註冊!" });
         }
-
         bcrypt.compare(password, user.password, (err, isMatch) => {
           if (err) throw err
           if (isMatch) {
             return done(null, user)
           }
           else {
-            return done(null, false, { message: "Email or Password incorrect" })
+            return done(null, false, { message: "密碼不正確, 請重新輸入!" })
           }
         })
       })
