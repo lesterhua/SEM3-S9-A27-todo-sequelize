@@ -1,4 +1,4 @@
-# 家庭記帳本 Expense tracker
+# Todo-List by sequelize
 
 使用 Node.js + Express + MySQL 打造的todo list網站，可以新增、刪除、修改，打造使用者認證系統，可以用 fb 登入，提供兩個篩選器:A-Z 和 Z-A
 
@@ -112,11 +112,14 @@ select * from users;
 
 ## 畫面 - Demo
 
-![alt text](https://github.com/lesterhua/SEM3-S6-A11-expense-tracker/blob/master/public/exp-new.gif)
+![alt text](https://github.com/lesterhua/SEM3-S9-A27-todo-sequelize/blob/master/picturs/register.gif?raw=true)
 
-![alt text](https://github.com/lesterhua/SEM3-S6-A11-expense-tracker/blob/master/public/exp-new.gif)
+![alt text](https://github.com/lesterhua/SEM3-S9-A27-todo-sequelize/blob/master/picturs/login%20&%20sort.gif?raw=true)
 
-![alt text](https://github.com/lesterhua/SEM3-S6-A11-expense-tracker/blob/master/public/exp-sort.gif)
+![alt text](https://github.com/lesterhua/SEM3-S9-A27-todo-sequelize/blob/master/picturs/facebook.gif?raw=true)
+
+![alt text](https://github.com/lesterhua/SEM3-S9-A27-todo-sequelize/blob/master/picturs/CRUD.gif?raw=true)
+
 
 ## 作者 - Authors
 
