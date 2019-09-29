@@ -1,5 +1,21 @@
-<a href="/todos/new" class="btn btn-warning mb-4">Create</a>
-<ul class="list-group">
+<div class="row">
+  <div class="col-auto mr-auto">
+    <a href="/todos/new" class="btn btn-warning mb-4">Create</a>
+  </div>
+  <div class="col-auto">
+    {{!-- sort --}}
+    <div class="dropdown d-flex align-items-end justify-content-end btn-group">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">篩選器</button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="name_asc">A→Z</a>
+        <a class="dropdown-item" href="name_desc">Z→A</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul class=" list-group">
   {{#each todos}}
   <li class="list-group-item">
     <div class="row">
